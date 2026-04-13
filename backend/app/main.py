@@ -1,5 +1,7 @@
+from app.db import base 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.routes import auth
 
 app = FastAPI(title="Conexión Familiar API")
 
@@ -18,3 +20,5 @@ def root():
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+app.include_router(auth.router)
