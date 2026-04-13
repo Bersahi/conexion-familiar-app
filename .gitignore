@@ -1,0 +1,24 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.env.local
+
+# Backend / Python
+__pycache__/
+*.pyc
+.env
+
+# Docker / Postgres
+postgres_data/
+*.log
+
+# VS Code
+.vscode/
