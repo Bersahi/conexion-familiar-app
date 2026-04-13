@@ -6,6 +6,6 @@ class Base(DeclarativeBase):
 
 from app.models.role import Role
 from app.models.user import User
-from app.models.transaccion import Transaction
+from app.models.transaction import Transaction
 from app.models.exchange_rate_log import ExchangeRateLog
 

@@ -11,7 +11,7 @@ from app.db.base import Base
 # Importa todos los modelos para que Alembic los detecte
 from app.models.user import User
 from app.models.role import Role
-from app.models.transaccion import Transaction
+from app.models.transaction import Transaction
 from app.models.exchange_rate_log import ExchangeRateLog
 
 config = context.config

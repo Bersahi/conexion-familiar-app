@@ -1,13 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from app.db.session import get_db
-from app.models.transaccion import Transaction
+from app.models.transaction import Transaction
 from app.models.exchange_rate_log import ExchangeRateLog
-from app.schemas.transaccion import TransactionCreate, TransactionResponse
-
+from app.schemas.transaction import TransactionCreate, TransactionResponse
+from app.core.dependencies import get_current_user, get_emisor, get_receptor
 from app.services.exchange_rate import get_exchange_rate
 from app.models.user import User
-from app.routes.dependencias import get_current_user, get_emisor, get_receptor
 
 router = APIRouter(prefix="/transactions", tags=["transactions"])
 
