@@ -15,7 +15,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql://postgres:postgres@db:5432/conexion_familiar
+      DATABASE_URL: postgresql+psycopg2://postgres:postgres@db:5432/conexion_familiar
     depends_on:
       - db
     volumes:
