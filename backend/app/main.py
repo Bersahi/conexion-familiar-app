@@ -2,6 +2,7 @@ from app.db import base
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import auth
+from backend.app.routes import transacciones
 
 app = FastAPI(title="Conexión Familiar API")
 
@@ -22,3 +23,4 @@ def health_check():
     return {"status": "ok"}
 
 app.include_router(auth.router)
+app.include_router(transacciones.router)
